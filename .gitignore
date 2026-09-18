@@ -1,0 +1,16 @@
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.onnx
+*.safetensors
+G5618_WONKA_DNA.pth
+*.key
+*.pem
+*.json
+*.env
+service_account.json
+gcp_creds.json
+!data/sample/*.json
+__pycache__/
+*.py[cod]
