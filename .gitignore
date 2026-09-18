@@ -1,0 +1,54 @@
+# Proprietary model weights and checkpoints
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.onnx
+*.safetensors
+G5618_WONKA_DNA.pth
+
+# Credentials, secrets, and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+service_account.json
+gcp_creds.json
+*.credentials.json
+
+# JSON is private by default; only the reviewed sample directory is public.
+*.json
+!data/sample/*.json
+
+# Private datasets and local exports
+data/private/
+data/raw/
+data/**/*.csv
+data/**/*.tsv
+*.parquet
+*.pkl
+*.pickle
+
+# Archives and backups
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bak
+
+# Python, tooling, and OS artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

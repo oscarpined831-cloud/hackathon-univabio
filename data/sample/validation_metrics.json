@@ -1,0 +1,23 @@
+{
+  "data_status": "example_audit_data",
+  "source_note": "Illustrative values transcribed from the hackathon specification; not clinical or experimental evidence.",
+  "model_access": "No private model or proprietary weights are included or required.",
+  "threshold_note": "The validator uses an arbitrary demo threshold of 85.0 for reproducibility only.",
+  "residues": {
+    "Lys22": {
+      "pLDDT": 89.2,
+      "target": "DNA_electrostatic_contact",
+      "verified": true
+    },
+    "Asp44": {
+      "pLDDT": 88.4,
+      "target": "divalent_ion_coordination",
+      "verified": true
+    },
+    "Gly46": {
+      "pLDDT": 87.9,
+      "target": "loop_conformation",
+      "verified": true
+    }
+  }
+}
