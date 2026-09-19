@@ -32,17 +32,45 @@ JSON de muestra -> core/validator.py -> salida PASS/FAIL
 Consulta [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) para el flujo, los límites
 y las decisiones de reproducibilidad.
 
-## Ejecutar
+## Execution & Reproducibility
 
-Requiere Python 3.9+:
+The verification engine is designed for zero-friction evaluation across any operating system (Windows, macOS, Linux). It relies solely on the Python standard library (Python 3.8+ required; no external dependencies or virtual environment setups needed).
+
+### 1. Clone the Repository
 
 ```bash
-python scripts/parse_kukulkan.py
-python -m unittest discover -s tests -v
+git clone https://github.com/oscarpined831-cloud/hackathon-univabio.git
+cd hackathon-univabio
 ```
 
-La validación usa un umbral demostrativo configurable (`--threshold 85.0`); no
-es un criterio científico ni clínico.
+### 2. Run the Verification Engine (Cross-Platform)
+
+Works out of the box in Windows (PowerShell / Command Prompt), macOS Terminal, and Linux:
+
+```bash
+python3 core/validator.py
+```
+
+*(On Windows, you can also run: `python core/validator.py`)*
+
+### 3. (Optional) Run via Unix Shell Script
+
+For Linux, macOS, or Termux environments:
+
+```bash
+./scripts/parse_kukulkan.sh
+```
+
+### 4. Run Automated Unit Tests
+
+To verify test assertions independently:
+
+```bash
+python3 -m unittest discover -s tests
+```
+
+The validation uses a configurable demonstration threshold (`--threshold 85.0`);
+it is not a scientific or clinical criterion.
 
 ## Reproducibilidad y seguridad
 

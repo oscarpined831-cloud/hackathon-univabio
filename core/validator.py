@@ -10,14 +10,14 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Dict, List
 
 REQUIRED_RESIDUES = ("Lys22", "Asp44", "Gly46")
 REQUIRED_FIELDS = ("pLDDT", "target", "verified")
 DEFAULT_SAMPLE = Path(__file__).parents[1] / "data" / "sample" / "validation_metrics.json"
 
 
-def load_metrics(path: Path) -> dict[str, Any]:
+def load_metrics(path: Path) -> Dict[str, Any]:
     """Load and validate the public sample JSON document."""
     with path.open(encoding="utf-8") as handle:
         document = json.load(handle)
@@ -43,7 +43,7 @@ def load_metrics(path: Path) -> dict[str, Any]:
     return document
 
 
-def validate_metrics(document: dict[str, Any], threshold: float = 85.0) -> list[str]:
+def validate_metrics(document: Dict[str, Any], threshold: float = 85.0) -> List[str]:
     """Return human-readable failures against the demonstration threshold."""
     failures = []
     for residue in REQUIRED_RESIDUES:
