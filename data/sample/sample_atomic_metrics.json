@@ -1,0 +1,10 @@
+{
+  "simulation_id": "AF3_KUKULKAN_001",
+  "target_complex": "PDB_7BBV_7RCE_STABILIZED",
+  "global_metrics": { "plddt": 88.4, "iptm": 0.91, "rmsd_angstrom": 0.82 },
+  "critical_residues": [
+    { "residue_number": 22, "amino_acid": "Lys", "target_role": "DNA_Electrostatic_Contact", "plddt": 89.2, "status": "SECURED" },
+    { "residue_number": 44, "amino_acid": "Asp", "target_role": "Ca2+_Chelation", "plddt": 88.4, "status": "SECURED" },
+    { "residue_number": 46, "amino_acid": "Gly", "target_role": "Loop_Integrity", "plddt": 87.9, "status": "SECURED" }
+  ]
+}
